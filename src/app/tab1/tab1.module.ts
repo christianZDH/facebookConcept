@@ -6,6 +6,7 @@ import { Tab1Page } from './tab1.page';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { RouterModule } from '@angular/router';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab1Page }]),
     Tab1PageRoutingModule,
+    ComponentsModule,
   ],
   declarations: [Tab1Page],
 })
