@@ -1,0 +1,22 @@
+<div class="containerSlides ion-padding-start">
+  <swiper [config]="config">
+    <ng-template swiperSlide>
+      <ion-thumbnail>
+        <ion-img src="assets/images/profile.png"></ion-img>
+        <ion-icon class="add_storie" src="assets/icon/addstorie.svg"></ion-icon>
+      </ion-thumbnail>
+      <ion-label>Crear historia</ion-label>
+    </ng-template>
+    <ng-template *ngFor="let storie of stories" swiperSlide>
+      <ion-thumbnail>
+        <ion-img [src]="storie.photoStorieUrl"></ion-img>
+      </ion-thumbnail>
+      <ion-avatar class="photo_user">
+        <ion-img [src]="storie.userPhotoUrl"></ion-img>
+      </ion-avatar>
+      <ion-text class="ion-text-center">
+        <ion-label class="ion-text-center">{{ storie.nameUser }}</ion-label>
+      </ion-text>
+    </ng-template>
+  </swiper>
+</div>
