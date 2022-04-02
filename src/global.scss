@@ -31,3 +31,10 @@
 ion-button{
   text-transform: none !important;
 }
+
+.swiper-slide {
+  text-align: center !important;
+  flex-direction: column !important;
+  display: flex !important;
+  align-items: center;
+}
