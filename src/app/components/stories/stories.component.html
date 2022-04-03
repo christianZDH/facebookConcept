@@ -2,9 +2,7 @@
   <swiper [config]="config">
     <ng-template class="ion-activatable ripple-parent" swiperSlide>
       <ion-thumbnail>
-        <ion-img
-          src="https://lh3.googleusercontent.com/6fiD_Igt4KXgiL57_3XzjMbj5M38KOhcLQJZpFm13mKI7URwvIUDwJczSYgBaZxl5SRVkTceq0u0hPHEO5Tf_fz_9U6aYuYrMxkiiYsjooWtAVwyxs1iZ5V4J6RbilbfRNkk2DkbhQY4MypqNCSDNb3K8WfYR8rJBUeYWspTmCRme8z89PpZn6kR9Ocm-VddvOnk5sEooV03wp9yuo3MCJrZT2IDv3Us1NgTNNkhg3QHV9oPZr2y_Ah8eAP4WELlK16zZ46tOtsOydZvqJ3u52DVojsWyO-7CdwsfkW335glw8133ookALxfM-9qcNqrA9rl_bxNyHtbX0gfXbc8XfpdmhK2IQi8xTGtJ-aQsNOqweqIOVbCCS56zXlJGQbvubc3DwvFmUuaPoBM8CsGaCR5hdenkdXxCRD1QuCs8upoP7koka6jNInj7-_1HjgIb4a8QlRrM6bHW-TMbv4BsH8e45dQP-2RKor-kkkzo4N2aeyv9y5W7WSRxKpImXO1Gl4ptXwkrwlHikApuet6_9wG4hORwYJTVFIUJdX1VhHT31-MOVy4KYUG-KUcfjDPaqp3hGgI7FWpelM9hSqe02W_pdETpTqyoDDDoErlKeRgS5L14wzoqnSrSz6ChZkp7PCZ2E3GBHQ5C0Dhn12V9-suCXm0d5QsJM3t2WLOOhus4s2mp2xqfCqeBayWdeZ8BtVww9Q2svizN9twSDLIA-uKaD818wzCxLyZ5-LWDevUivtpDK0LMAxzz71AnmCyujFPqb_mfglqgOCf8UokWmWmIiY7E33BmKM3vH7M6a3wUDoICpCA4Vp4cl5YycwaYro=w216-h289-no?authuser=0"
-        ></ion-img>
+        <ion-img [src]="user.userPhotoUrl"></ion-img>
         <ion-icon class="add_storie" src="assets/icon/addstorie.svg"></ion-icon>
       </ion-thumbnail>
       <ion-label>Crear historia</ion-label>
