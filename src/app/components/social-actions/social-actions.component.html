@@ -2,11 +2,11 @@
   <div class="line"></div>
   <ion-item lines="none">
     <ion-avatar slot="start">
-      <ion-img src="assets/images/profile.png"></ion-img>
+      <ion-img [src]="user.userPhotoUrl"></ion-img>
     </ion-avatar>
     <ion-input
       color="medium"
-      placeholder="¡Qué estas pensando, Mao?"
+      placeholder="¡Qué estas pensando, {{ firstName | titlecase }}?"
     ></ion-input>
     <ion-button slot="end" fill="clear" shape="round">
       <ion-icon slot="icon-only" src="assets/icon/emoji.svg"></ion-icon>

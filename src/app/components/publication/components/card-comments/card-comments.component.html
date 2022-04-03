@@ -1,0 +1,21 @@
+<ion-item
+  *ngFor="let comment of publication.comments"
+  class="transparent"
+  lines="none"
+>
+  <ion-avatar class="avatarUserComment" slot="start">
+    <ion-img [src]="comment.userPhotoUrl"></ion-img>
+  </ion-avatar>
+  <ion-text>
+    <ion-label class="comments_name_user">{{ comment.userName }}</ion-label>
+    <ion-label class="comments_description_user">{{
+      comment.description
+    }}</ion-label>
+    <ion-col size="6">
+      <ion-button fill="clear"> Me gusta </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button fill="clear"> Responder </ion-button>
+    </ion-col>
+  </ion-text>
+</ion-item>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UserI } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'app-social-actions',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./social-actions.component.scss'],
 })
 export class SocialActionsComponent implements OnInit {
+  @Input() user: UserI;
+  firstName: string;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {}
-
+  ngOnInit() {
+    this.firstName = this.user.userName.split(' ')[0];
+  }
 }

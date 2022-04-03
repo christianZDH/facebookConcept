@@ -1,0 +1,43 @@
+.publicationPhoto{
+  width: 100%;
+  height: 240px;
+  --border-radius: 14px;
+}
+
+.publicationDescription{
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.publicationLikes{
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon_like_facebook {
+  position: relative;
+}
+
+.icon_heart_facebook {
+  position: relative;
+  right: -5px;
+
+}
+
+ion-item {
+  ion-buttons {
+    ion-button {
+      --background: var(--ion-color-dark-tint) !important;
+    }
+  }
+  ion-icon {
+    font-size: 15px;
+  }
+}
+
+ion-thumbnail{
+  ion-img{
+    background-size: cover;
+  }
+}

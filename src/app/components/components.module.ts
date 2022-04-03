@@ -6,10 +6,27 @@ import { SocialActionsComponent } from './social-actions/social-actions.componen
 import { StoriesComponent } from './stories/stories.component';
 
 import { SwiperModule } from 'swiper/angular';
+import { PublicationComponent } from './publication/publication.component';
+import { CardHeaderComponent } from './publication/components/card-header/card-header.component';
+import { CardContentComponent } from './publication/components/card-content/card-content.component';
+import { CardCommentsComponent } from './publication/components/card-comments/card-comments.component';
 
 @NgModule({
-  declarations: [ToolbarComponent, SocialActionsComponent, StoriesComponent],
+  declarations: [
+    ToolbarComponent,
+    SocialActionsComponent,
+    StoriesComponent,
+    PublicationComponent,
+    CardHeaderComponent,
+    CardContentComponent,
+    CardCommentsComponent,
+  ],
   imports: [CommonModule, IonicModule, SwiperModule],
-  exports: [ToolbarComponent, SocialActionsComponent, StoriesComponent],
+  exports: [
+    ToolbarComponent,
+    SocialActionsComponent,
+    StoriesComponent,
+    PublicationComponent,
+  ],
 })
 export class ComponentsModule {}

@@ -1,0 +1,31 @@
+<ion-item lines="none" class="transparent" button>
+  <ion-avatar slot="start">
+    <ion-img [src]="publication.photoUserUrl"></ion-img>
+  </ion-avatar>
+  <ion-text class="textUserName">
+    <ion-label class="nameUser">{{
+      publication.userName | titlecase
+    }}</ion-label>
+    <ion-label class="publicationDate" color="medium">
+      <ion-icon style="margin-right: 5px" src="assets/icon/globe.svg"></ion-icon
+      >{{ publication.date }}
+    </ion-label>
+  </ion-text>
+  <ion-buttons slot="end" class="buttonsOptionsPublication">
+    <ion-button fill="solid" shape="round">
+      <ion-icon
+        size="small"
+        slot="icon-only"
+        src="assets/icon/star.svg"
+      ></ion-icon>
+    </ion-button>
+    <ion-button fill="solid" shape="round">
+      <ion-icon
+        size="small"
+        color="medium"
+        slot="icon-only"
+        src="assets/icon/ellipse-horizontal.svg"
+      ></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-item>

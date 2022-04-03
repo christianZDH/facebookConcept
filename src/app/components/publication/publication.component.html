@@ -1,0 +1,12 @@
+<ion-card color="secondary">
+  <ion-card-header button>
+    <app-card-header [publication]="publication"></app-card-header>
+  </ion-card-header>
+  <ion-card-content>
+    <app-card-content [publication]="publication"></app-card-content>
+    <div
+      style="border-bottom: 1px solid var(--ion-color-dark-tint); width: 95%"
+    ></div>
+    <app-card-comments [publication]="publication"></app-card-comments>
+  </ion-card-content>
+</ion-card>
