@@ -1,12 +1,14 @@
 <ion-tabs (ionTabsWillChange)="onTabsChange($event)">
   <ion-tab-bar color="light" slot="bottom">
     <ion-tab-button *ngFor="let tab of tabs" tab="{{tab.tab}}">
-      <ion-icon
-        [ngClass]="{'tabSelected': tab.tab === tabSelected}"
-        color="primary"
-        [src]="tab.icon"
-      ></ion-icon>
-      <div *ngIf="tab.notification" class="notification"></div>
+      <div style="position: relative">
+        <ion-icon
+          [ngClass]="{'tabSelected': tab.tab === tabSelected}"
+          color="primary"
+          [src]="tab.icon"
+        ></ion-icon>
+        <div *ngIf="tab.notification" class="notification"></div>
+      </div>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
