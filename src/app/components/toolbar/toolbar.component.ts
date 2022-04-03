@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { UserI } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'app-toolbar',
@@ -6,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent implements OnInit {
+  user: UserI;
+  constructor(private userService: UserService) {}
 
-  constructor() { }
-
-  ngOnInit() {}
-
+  ngOnInit() {
+    this.userService.getUser().subscribe((user: UserI) => {
+      this.user = user;
+    });
+  }
 }
