@@ -3,6 +3,7 @@
 </ion-header>
 
 <ion-content color="tertiary" [fullscreen]="true">
-  <app-social-actions></app-social-actions>
-  <app-stories [stories]="stories"></app-stories>
+  <app-social-actions [user]="user"></app-social-actions>
+
+  <app-stories [user]="user" [stories]="stories"></app-stories>
 </ion-content>
