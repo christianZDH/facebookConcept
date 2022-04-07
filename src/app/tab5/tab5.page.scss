@@ -1,0 +1,32 @@
+.contentMenu {
+  background-color: var(--ion-color-secondary);
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.darkmode {
+  ion-label {
+    font-size: 13px;
+    --color: var(--ion-color-secondary-contrast);
+  }
+
+  ion-icon {
+    background-color: var(--ion-color-dark-shade);
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+  }
+
+  ion-toggle {
+    width: 27px;
+    height: 15px;
+    --handle-height: 15px;
+    --handle-width: 15px;
+  }
+}

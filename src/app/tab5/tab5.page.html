@@ -1,7 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Tab 5 </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+  <app-toolbar></app-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true"> </ion-content>
+<ion-content color="tertiary">
+  <app-social-actions [user]="user"></app-social-actions>
+
+  <div class="contentMenu ion-margin-top">
+    <ion-item class="transparent" lines="none">
+      <ion-label color="dark" class="title">Menú</ion-label>
+      <ion-item lines="none" class="transparent darkmode">
+        <ion-icon src="assets/icon/darkmode.svg"></ion-icon>
+        <ion-label>Modo oscuro</ion-label>
+        <ion-toggle (ionChange)="toggleDarkmode($event)"></ion-toggle>
+      </ion-item>
+    </ion-item>
+
+    <app-options-slide [options]="optionSlide"></app-options-slide>
+
+    <app-shortcuts-slide [shortcuts]="shortcuts"></app-shortcuts-slide>
+
+    <app-shortcuts></app-shortcuts>
+  </div>
+</ion-content>

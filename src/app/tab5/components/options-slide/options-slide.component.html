@@ -1,0 +1,8 @@
+<swiper class="slide__width__auto" [config]="configSlide">
+  <ng-template *ngFor="let option of options" swiperSlide>
+    <ion-button fill="clear">
+      <ion-icon slot="start" src="assets/icon/{{ option.icon }}.svg"></ion-icon>
+      {{ option.description }}
+    </ion-button>
+  </ng-template>
+</swiper>

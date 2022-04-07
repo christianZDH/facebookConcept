@@ -1,0 +1,13 @@
+<swiper [config]="configSlide">
+  <ng-template *ngFor="let item of shortcuts" swiperSlide>
+    <ion-card class="card">
+      <ion-thumbnail>
+        <ion-icon *ngIf="item.icon" class="icon" [src]="item.icon"></ion-icon>
+        <ion-img [src]="item.photoUrl"></ion-img>
+        <ion-chip *ngIf="item.date" class="chip" mode="ios">
+          <ion-label>{{ item.date }}</ion-label>
+        </ion-chip>
+      </ion-thumbnail>
+    </ion-card>
+  </ng-template>
+</swiper>

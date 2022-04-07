@@ -32,13 +32,18 @@ ion-button{
   text-transform: none !important;
 }
 
-.swiper-slide {
-  text-align: center !important;
-  flex-direction: column !important;
-  display: flex !important;
-  align-items: center;
-}
-
 .transparent {
   --background: transparent;
+}
+
+.slide__width__auto .swiper-slide {
+  width: auto !important;
+  text-align: center;
+}
+
+.swiperStories .swiper-slide {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
 }
