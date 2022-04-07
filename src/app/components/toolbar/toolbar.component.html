@@ -14,7 +14,7 @@
       <ion-icon size="small" src="assets/icon/messenger.svg"></ion-icon>
     </ion-button>
   </ion-buttons>
-  <ion-avatar class="ion-margin-end" slot="end">
+  <ion-avatar (click)="redirectToProfile()" class="ion-margin-end" slot="end">
     <ion-img [src]="user.userPhotoUrl"></ion-img>
   </ion-avatar>
 </ion-toolbar>
