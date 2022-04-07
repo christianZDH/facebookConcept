@@ -1,27 +1,23 @@
 <div class="containerSlides ion-padding-start">
-  <swiper [config]="config">
-    <ng-template class="ion-activatable ripple-parent" swiperSlide>
-      <ion-thumbnail>
+  <swiper class="swiperStories" [config]="config">
+    <ng-template swiperSlide>
+      <ion-thumbnail class="ion-activatable">
         <ion-img [src]="user.userPhotoUrl"></ion-img>
         <ion-icon class="add_storie" src="assets/icon/addstorie.svg"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
       </ion-thumbnail>
       <ion-label>Crear historia</ion-label>
-      <ion-ripple-effect></ion-ripple-effect>
     </ng-template>
 
-    <ng-template
-      class="ion-activatable ripple-parent"
-      *ngFor="let storie of stories"
-      swiperSlide
-    >
-      <ion-thumbnail button>
+    <ng-template *ngFor="let storie of stories" swiperSlide>
+      <ion-thumbnail class="ion-activatable">
         <ion-img [src]="storie.photoStorieUrl"></ion-img>
         <ion-avatar class="photo_user">
           <ion-img [src]="storie.userPhotoUrl"></ion-img>
         </ion-avatar>
+        <ion-ripple-effect></ion-ripple-effect>
       </ion-thumbnail>
       <ion-label class="ion-text-center">{{ storie.nameUser }}</ion-label>
-      <ion-ripple-effect></ion-ripple-effect>
     </ng-template>
   </swiper>
 </div>
