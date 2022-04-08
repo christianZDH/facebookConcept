@@ -10,9 +10,16 @@
 </ion-item>
 <div class="containerFriends ion-padding-start">
   <swiper class="slideCenter" [config]="config">
-    <ng-template *ngFor="let friend of friends" swiperSlide>
+    <ng-template
+      *ngFor="let friend of friends"
+      class="animate__animated animate__fadeIn"
+      swiperSlide
+    >
       <ion-thumbnail class="ion-activatable">
-        <ion-img [src]="friend.userPhotoUrl"></ion-img>
+        <ion-img
+          class="animate__animated animate__fadeIn"
+          [src]="friend.userPhotoUrl"
+        ></ion-img>
         <ion-ripple-effect></ion-ripple-effect>
       </ion-thumbnail>
       <ion-label class="ion-text-center userName">{{

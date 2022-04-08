@@ -3,7 +3,18 @@
     <ion-button routerLink="/" class="btnBack" fill="clear">
       <ion-icon name="chevron-back-outline"></ion-icon>
     </ion-button>
-    <ion-img [src]="user?.backgroundPhotoUrl"></ion-img>
+    <ion-img
+      class="animate__animated animate__fadeIn"
+      [ngClass]="{ 'ion-hide': skeletonImg }"
+      (ionImgWillLoad)="skeletonImg = true"
+      (ionImgDidLoad)="skeletonImg = false"
+      [src]="user?.backgroundPhotoUrl"
+    ></ion-img>
+    <ion-skeleton-text
+      *ngIf="skeletonImg"
+      animated
+      style="width: 100%; height: 100%"
+    ></ion-skeleton-text>
     <ion-button class="btnSearch" fill="clear">
       <ion-icon name="search-outline"></ion-icon>
     </ion-button>
@@ -11,7 +22,18 @@
 
   <div class="content">
     <ion-avatar>
-      <ion-img [src]="user?.userPhotoUrl"></ion-img>
+      <ion-img
+        class="animate__animated animate__fadeIn animate__faster"
+        [ngClass]="{ 'ion-hide': skeletonImgProfile }"
+        (ionImgWillLoad)="skeletonImgProfile = true"
+        (ionImgDidLoad)="skeletonImgProfile = false"
+        [src]="user?.userPhotoUrl"
+      ></ion-img>
+      <ion-skeleton-text
+        *ngIf="skeletonImgProfile"
+        animated
+        style="width: 100%; height: 100%"
+      ></ion-skeleton-text>
     </ion-avatar>
     <div class="contentUserName">
       <ion-label class="userName">{{ user?.userName|titlecase }}</ion-label>

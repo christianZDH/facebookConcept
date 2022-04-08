@@ -8,18 +8,21 @@ import { UserService } from '../../services/user.service';
   templateUrl: './profile.page.html',
   styleUrls: ['./profile.page.scss'],
 })
-export class ProfilePage {
+export class ProfilePage implements OnInit {
   user: UserI;
   collections: CollectionI[] = [];
   friends: FriendI[] = [];
-
+  skeletonImg = false;
+  skeletonImgProfile = false;
   constructor(private userService: UserService) {}
 
-  ionViewDidEnter() {
+  ngOnInit(): void {
     this.userService.getUser().subscribe((user) => {
       this.user = user;
     });
+  }
 
+  ionViewDidEnter() {
     this.userService.getCollections().subscribe((collections) => {
       this.collections = collections;
     });
