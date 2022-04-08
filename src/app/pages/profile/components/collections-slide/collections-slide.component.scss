@@ -1,0 +1,17 @@
+.containerCollections {
+  ion-thumbnail{
+    width: 92.63px;
+    height: 110.79px;
+    margin-bottom: 10px;
+    ion-img {
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .description {
+    font-size: 13px;
+    color: var(--ion-color-dark);
+  }
+}

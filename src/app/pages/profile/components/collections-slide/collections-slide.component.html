@@ -1,0 +1,13 @@
+<div class="containerCollections ion-padding-start">
+  <swiper class="slideCenter" [config]="config">
+    <ng-template *ngFor="let collection of collections" swiperSlide>
+      <ion-thumbnail class="ion-activatable">
+        <ion-img [src]="collection.collectionPhotoUrl"></ion-img>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-thumbnail>
+      <ion-label class="ion-text-center description">{{
+        collection.description
+      }}</ion-label>
+    </ng-template>
+  </swiper>
+</div>

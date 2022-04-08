@@ -1,0 +1,62 @@
+<ion-content color="tertiary">
+  <ion-thumbnail>
+    <ion-button routerLink="/" class="btnBack" fill="clear">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-button>
+    <ion-img [src]="user?.backgroundPhotoUrl"></ion-img>
+    <ion-button class="btnSearch" fill="clear">
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-thumbnail>
+
+  <div class="content">
+    <ion-avatar>
+      <ion-img [src]="user?.userPhotoUrl"></ion-img>
+    </ion-avatar>
+    <div class="contentUserName">
+      <ion-label class="userName">{{ user?.userName|titlecase }}</ion-label>
+      <ion-label class="description">{{ user?.description }}</ion-label>
+    </div>
+
+    <div class="contentButtons">
+      <ion-button class="btnMessage" color="primary" shape="round">
+        <ion-icon slot="start" src="assets/icon/messenger.svg"></ion-icon>
+        Mensaje
+      </ion-button>
+      <ion-button
+        class="ion-margin-start"
+        color="primary"
+        fill="outline"
+        shape="round"
+      >
+        Llamar
+      </ion-button>
+      <ion-button class="btnOptions ion-margin-start" fill="outline">
+        <ion-icon name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="line ion-margin-top"></div>
+
+    <ion-text class="text ion-margin-start ion-margin-top">
+      <ion-label>
+        <ion-icon color="medium" src="assets/icon/home-facebook.svg"></ion-icon>
+        Vive en {{ user?.from }}
+      </ion-label>
+      <ion-label>
+        <ion-icon color="medium" src="assets/icon/clock.svg"></ion-icon>
+        Se unió en: {{ user?.join }}
+      </ion-label>
+      <ion-label>
+        <ion-icon color="medium" src="assets/icon/information.svg"></ion-icon>
+        Más información de {{ user?.userName }}
+      </ion-label>
+    </ion-text>
+
+    <app-collections-slide [collections]="collections"></app-collections-slide>
+
+    <div class="line ion-margin-top"></div>
+
+    <app-friends-slide [user]="user" [friends]="friends"></app-friends-slide>
+  </div>
+</ion-content>

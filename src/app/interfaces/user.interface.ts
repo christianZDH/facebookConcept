@@ -1,5 +1,6 @@
 export interface UserI {
   userPhotoUrl: string;
+  backgroundPhotoUrl: string;
   userName: string;
   description: string;
   from: string;

@@ -1,0 +1,23 @@
+<ion-item class="transparent" lines="none">
+  <span class="textFriends"
+    >Amigos
+    <span class="countFriends"
+      >({{ user?.friendsCount | number }} amigos)</span
+    ></span
+  >
+
+  <ion-button slot="end" fill="clear" shape="round"> Ver todos </ion-button>
+</ion-item>
+<div class="containerFriends ion-padding-start">
+  <swiper class="slideCenter" [config]="config">
+    <ng-template *ngFor="let friend of friends" swiperSlide>
+      <ion-thumbnail class="ion-activatable">
+        <ion-img [src]="friend.userPhotoUrl"></ion-img>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-thumbnail>
+      <ion-label class="ion-text-center userName">{{
+        friend.userName | titlecase
+      }}</ion-label>
+    </ng-template>
+  </swiper>
+</div>
