@@ -4,7 +4,18 @@
   lines="none"
 >
   <ion-avatar class="avatarUserComment" slot="start">
-    <ion-img [src]="comment.userPhotoUrl"></ion-img>
+    <ion-img
+      class="animate__animated animate__fadeIn"
+      [ngClass]="{ 'ion-hide': skeletonImg }"
+      (ionImgWillLoad)="skeletonImg = true"
+      (ionImgDidLoad)="skeletonImg = false"
+      [src]="comment.userPhotoUrl"
+    ></ion-img>
+    <ion-skeleton-text
+      *ngIf="skeletonImg"
+      animated
+      style="width: 100%; height: 100%"
+    ></ion-skeleton-text>
   </ion-avatar>
   <ion-text>
     <ion-label class="comments_name_user">{{ comment.userName }}</ion-label>

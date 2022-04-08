@@ -8,6 +8,7 @@ import { PublicationI } from '../../../../interfaces/publication.interface';
 })
 export class CardCommentsComponent implements OnInit {
   @Input() publication: PublicationI;
+  skeletonImg = false;
   constructor() {}
 
   ngOnInit() {}

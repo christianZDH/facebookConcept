@@ -1,6 +1,17 @@
 <ion-item lines="none" class="transparent" button>
   <ion-avatar slot="start">
-    <ion-img [src]="publication.photoUserUrl"></ion-img>
+    <ion-img
+      class="animate__animated animate__fadeIn"
+      [ngClass]="{ 'ion-hide': skeletonImg }"
+      (ionImgWillLoad)="skeletonImg = true"
+      (ionImgDidLoad)="skeletonImg = false"
+      [src]="publication.photoUserUrl"
+    ></ion-img>
+    <ion-skeleton-text
+      *ngIf="skeletonImg"
+      animated
+      style="width: 100%; height: 100%"
+    ></ion-skeleton-text>
   </ion-avatar>
   <ion-text class="textUserName">
     <ion-label class="nameUser">{{
