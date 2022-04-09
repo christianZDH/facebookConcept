@@ -1,5 +1,9 @@
 <swiper [config]="configSlide">
-  <ng-template *ngFor="let item of shortcuts" swiperSlide>
+  <ng-template
+    *ngFor="let item of shortcuts"
+    class="animate__animated animate__fadeIn"
+    swiperSlide
+  >
     <ion-card class="card">
       <ion-thumbnail>
         <ion-icon *ngIf="item.icon" class="icon" [src]="item.icon"></ion-icon>
